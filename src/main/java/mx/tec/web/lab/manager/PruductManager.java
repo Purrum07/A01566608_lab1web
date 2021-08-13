@@ -65,7 +65,14 @@ public class PruductManager {
 		products.add(newProduct);
 		return Optional.of(newProduct);
 	}
-
-
-
+	
+	public Optional<Product> modifyProduct(int index, final Product modifiedProduct) {
+		products.set(index, modifiedProduct);
+		return Optional.of(modifiedProduct);
+	}
+	
+	public boolean deleteProduct(int index) {
+		products.remove(index);
+		return true;
+	}
 }

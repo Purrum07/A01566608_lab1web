@@ -86,8 +86,8 @@ public class ProductController {
 	}
 	
 	@DeleteMapping("/products/{id}")
-	public ResponseEntity<Product> deleteProduct(@PathVariable(value = "id") String id) {
-		ResponseEntity<Product> responseEntity = new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+	public ResponseEntity<String> deleteProduct(@PathVariable(value = "id") String id) {
+		ResponseEntity<String> responseEntity = new ResponseEntity<>(HttpStatus.BAD_REQUEST);
 		
 		List<Product> products = productManager.getProducts();
 		
@@ -98,7 +98,7 @@ public class ProductController {
 			boolean deletedProduct = productManager.deleteProduct(index);
 			
 			if (deletedProduct) {
-				responseEntity = new ResponseEntity<>(HttpStatus.OK);
+				responseEntity = new ResponseEntity<>("Product Deleted", HttpStatus.OK);
 			}
 		}
 		return responseEntity;

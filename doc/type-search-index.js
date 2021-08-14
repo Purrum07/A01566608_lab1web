@@ -1,1 +1,1 @@
-typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"mx.tec.web.lab","l":"Lab1Application"},{"p":"mx.tec.web.lab.vo","l":"Product"},{"p":"mx.tec.web.lab.controller","l":"ProductController"},{"p":"mx.tec.web.lab.manager","l":"PruductManager"},{"p":"mx.tec.web.lab.vo","l":"Sku"}];updateSearchResults();
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"mx.tec.web.lab.controller","l":"ProductController"}];updateSearchResults();

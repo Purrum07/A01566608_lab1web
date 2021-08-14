@@ -41,14 +41,19 @@ public class PruductManager {
 		product2.setChildSkus(childSkus2);
 		
 		products.add(product2);
-
-
 	}
 	
+	/**
+	 * @return the list of products
+	 */
 	public List<Product> getProducts() {
 		return products;
 	}
 
+	/**
+	 * @param id
+	 * @return the product found by id
+	 */
 	public Optional<Product> getProduct(final String id) {
 		Optional<Product> foundProduct = Optional.empty();
 		
@@ -61,16 +66,29 @@ public class PruductManager {
 		return foundProduct;
 	}
 	
+	/**
+	 * @param newProduct
+	 * @return the new product added to the list
+	 */
 	public Optional<Product> addProduct(final Product newProduct) {
 		products.add(newProduct);
 		return Optional.of(newProduct);
 	}
 	
+	/**
+	 * @param index
+	 * @param modifiedProduct
+	 * @return the modified product in the list
+	 */
 	public Optional<Product> modifyProduct(int index, final Product modifiedProduct) {
 		products.set(index, modifiedProduct);
 		return Optional.of(modifiedProduct);
 	}
 	
+	/**
+	 * @param index
+	 * @return true indicating the product was removed from the list
+	 */
 	public boolean deleteProduct(int index) {
 		products.remove(index);
 		return true;

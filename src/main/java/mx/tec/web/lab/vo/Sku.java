@@ -1,5 +1,9 @@
 package mx.tec.web.lab.vo;
-
+/**
+ * 
+ * @author mario
+ *
+ */
 public class Sku {
 	private String id;
 	private String color;

@@ -30,6 +30,9 @@ public class ProductController {
 	@Resource
 	private PruductManager productManager;
 	
+	/**
+	 * @return all the products from the list of products
+	 */
 	@GetMapping("/products")
 	public ResponseEntity<List<Product>> getProducts() {
 		List<Product> products = productManager.getProducts();
@@ -38,6 +41,10 @@ public class ProductController {
 		return responseEntity;
 	}
 	
+	/**
+	 * @param id
+	 * @return the response entity depending in the content of it
+	 */
 	@GetMapping("/products/{id}")
 	public ResponseEntity<Product> getProduct(@PathVariable(value = "id") String id) {
 		ResponseEntity<Product> responseEntity = new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -51,6 +58,10 @@ public class ProductController {
 		return responseEntity;
 	}
 	
+	/**
+	 * @param newProduct
+	 * @return the response entity depending in the content of it
+	 */
 	@PostMapping("/products")
 	public ResponseEntity<Product> addProduct(@RequestBody Product newProduct) {
 		ResponseEntity<Product> responseEntity = new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -66,6 +77,11 @@ public class ProductController {
 		return responseEntity;
 	}
 	
+	/**
+	 * @param id
+	 * @param product
+	 * @return the response entity depending in the content of it
+	 */
 	@PutMapping("/products/{id}")
 	public ResponseEntity<Product> modifyProduct(@PathVariable(value = "id") String id, @RequestBody Product product) {
 		ResponseEntity<Product> responseEntity = new ResponseEntity<>(HttpStatus.BAD_REQUEST);
@@ -85,6 +101,10 @@ public class ProductController {
 		return responseEntity;
 	}
 	
+	/**
+	 * @param id
+	 * @return the response entity depending in the content of it
+	 */
 	@DeleteMapping("/products/{id}")
 	public ResponseEntity<String> deleteProduct(@PathVariable(value = "id") String id) {
 		ResponseEntity<String> responseEntity = new ResponseEntity<>(HttpStatus.BAD_REQUEST);

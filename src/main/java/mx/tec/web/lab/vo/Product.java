@@ -1,7 +1,11 @@
 package mx.tec.web.lab.vo;
 
 import java.util.List;
-
+/**
+ * 
+ * @author mario
+ *
+ */
 public class Product {
 	private String id;
 	private String name;
